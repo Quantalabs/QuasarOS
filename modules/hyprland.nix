@@ -33,6 +33,7 @@ in
     "HYPRCURSOR_SIZE,26"
     "XCURSOR_THEME,Bibata-Modern-Classic"
     "XCURSOR_SIZE,26"
+    "AQ_DRM_DEVICES,/dev/dri/card1"
   ];
   bind = [
     # Application keybinds
