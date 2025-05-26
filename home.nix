@@ -1,9 +1,8 @@
-quasar: utils: _upstream: plugins: pack:
+quasar: utils: _upstream: plugins: pack: slidr:
 {
   pkgs,
   config,
   lib,
-  inputs,
   ...
 }:
 
@@ -109,8 +108,8 @@ quasar: utils: _upstream: plugins: pack:
   wayland.windowManager.hyprland =
     let
       hyprscroller = pkgs.callPackage ./pkgs/vendored/hyprscroller.nix {
-        src = inputs.hyprscroller-src;
-        version = inputs.hyprscroller-src.lastModified;
+        src = slidr;
+        version = slidr.lastModified;
       };
     in
     {
