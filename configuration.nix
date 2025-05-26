@@ -90,28 +90,6 @@
 
     # Enable OpenGL for optimal graphics performance
     graphics.enable = quasar.graphics.opengl;
-
-    # NVIDIA settings
-    nvidia =
-      if quasar.graphics.nvidia.enabled then
-        {
-          package = config.boot.kernelPackages.nvidiaPackages.beta;
-          modesetting.enable = true;
-          powerManagement.enable = true;
-          powerManagement.finegrained = true;
-          open = false;
-          nvidiaSettings = true;
-          prime = {
-            offload = {
-              enable = true;
-              enableOffloadCmd = true;
-            };
-            inherit (quasar.graphics.nvidia) intelBusId;
-            inherit (quasar.graphics.nvidia) nvidiaBusId;
-          };
-        }
-      else
-        null;
   };
 
   # All services
