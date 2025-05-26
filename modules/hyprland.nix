@@ -55,11 +55,6 @@ in
     # recommended opacity toggle; see https://github.com/hyprwm/Hyprland/pull/7024
     "$mod, ${hypr "opaque" "O"}, exec, hyprctl setprop active opaque toggle"
 
-    # Hyprscroller
-    "$mod, ${hypr "view" "A"}, scroller:toggleoverview"
-    "$mod+Shift, K, scroller:cyclesize, +1"
-    "$mod+Shift, J, scroller:cyclesize, -1"
-
     # Hyprshot
     "$mod+Shift, ${hypr "window" "W"}, exec, hyprshot -m window --clipboard-only"
     "$mod+Alt, ${hypr "window" "W"}, exec, hyprshot -m window"
@@ -189,7 +184,7 @@ in
       "col.active_border" = lib.mkForce "rgba(${colors.base0A}ff) rgba(${colors.base09}ff) 45deg";
       "col.inactive_border" = lib.mkForce "rgba(${colors.base01}cc) rgba(${colors.base02}cc) 45deg";
 
-      layout = "scroller";
+      layout = "master";
       resize_on_border = "true";
       allow_tearing = "false";
     };
