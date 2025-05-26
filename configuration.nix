@@ -142,10 +142,6 @@
     # Ollama
     ollama.enable = true;
     ollama.acceleration = if quasar.graphics.nvidia.enabled then "cuda" else null;
-
-    # Install and configure appropriate NVIDIA drivers
-    # Do not attempt to disable unfree software packages if you enable this
-    xserver.videoDrivers = [ "nvidia" ];
   };
 
   # Time zone will be set automatically
