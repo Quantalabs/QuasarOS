@@ -101,6 +101,7 @@
       # betterbird,
       lanzaboote,
       stylix,
+      hyprscroller-src,
       ...
     }@inputs:
     let
@@ -247,6 +248,7 @@
                       (import ./home.nix quasar utils upstream
                         nixpkgs-upstream.legacyPackages.${quasar.system}.hyprlandPlugins
                         pack
+                        hyprscroller-src
                       )
                     ]
                     ++ quasar.homeOverrides;
