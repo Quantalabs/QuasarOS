@@ -354,7 +354,7 @@
 
   nixpkgs.config = {
     # Enable CUDA
-    cudaSupport = true;
+    cudaSupport = quasar.graphics.nvidia.enabled;
 
     # Allow proprietary NVIDIA and CUDA drivers, if necessary
     allowUnfreePredicate =
